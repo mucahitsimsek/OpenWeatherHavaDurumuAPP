@@ -12,23 +12,6 @@ class SearchPage extends StatefulWidget {
 class _SearchPageState extends State<SearchPage> {
   String selectedCity = ' ';
 
-  //
-  // void aFunc() {
-  //   print('aFunc çalıştı');
-  // }
-  //
-  // @override
-  // void initState() {
-  //   print('initstate metodu çalıştı');
-  //   super.initState();
-  // }
-  //
-  // @override
-  // void dispose() {
-  //   print('dispose çalıştı ve logout istendi');
-  //   super.dispose();
-  // }
-
   @override
   Widget build(BuildContext context) {
     // aFunc();
@@ -65,7 +48,7 @@ class _SearchPageState extends State<SearchPage> {
               ),
               ElevatedButton(
                 onPressed: () async{
-                  var response = await http.get(Uri.parse('https://api.openweathermap.org/data/2.5/weather?q=$selectedCity&appid=f0ce337d9ae758aa2ff731fd57e3d757&units=metric'));
+                  var response = await http.get(Uri.parse('https://api.openweathermap.org/data/2.5/weather?q=$selectedCity&appid={APIKEY}&units=metric'));
 
                   if(response.statusCode == 200){
                     //sayfa kaldır, sayfayı çağıran/açan yere komuta/satıra bir veri dön
