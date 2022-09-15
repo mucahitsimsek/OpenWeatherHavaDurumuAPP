@@ -19,7 +19,7 @@ class _HomePageState extends State<HomePage> {
   String location = 'İstanbul';
   double? temperature;
   String code = 'home';
-  final String key = 'f0ce337d9ae758aa2ff731fd57e3d757';
+  final String key = 'APIKEY';
   Position? devicePosition;
   // ignore: prefer_typing_uninitialized_variables
   var locationData;
